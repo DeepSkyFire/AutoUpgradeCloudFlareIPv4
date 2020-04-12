@@ -17,7 +17,7 @@ else
     exit 1
 fi
 
-if [ -s $CKNAME_TEMP_STR ];
+if [ -s $CF_TEMP_IP4 ];
 then
     echo "# IPv4 update $(date +%Y-%m-%d/%T)" > $CF_NGINX_CONFIG
     awk '{ print "allow " $0 ";" }' $CF_TEMP_IP4 >> $CF_NGINX_CONFIG
